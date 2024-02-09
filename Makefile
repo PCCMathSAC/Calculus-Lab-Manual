@@ -54,6 +54,7 @@ CLMXSL = $(CLM)/xsl
 CLMCSS = $(CLM)/css
 IMAGESSRC = $(SRC)/images
 GGBSRC = $(SRC)/geogebra
+MAINFILE = $(SRC)/clm.xml
 
 # These paths are subdirectories of
 # the Mathbook XML distribution
@@ -167,8 +168,10 @@ epub:
 #     "Element XXXX content does not follow"
 #     "No declaration for"
 #   Automatically invokes the "less" pager, could configure as $(PAGER)
-check:
+check:  
 	install -d $(OUTPUT)
-	-rm $(OUTPUT)/dtderrors.*
-	-xmllint --xinclude --postvalid --noout --dtdvalid $(DTD)/mathbook.dtd $(SRC)/clm.xml 2> $(OUTPUT)/dtderrors.txt
-	# less $(OUTPUT)/dtderrors.txt
+	-rm $(OUTPUT)/jingreport.txt
+	-java -classpath ~/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar ~/jing-trang/build/jing.jar $(PTX)/schema/pretext.rng $(MAINFILE) > $(OUTPUT)/jingreport.txt
+	less $(OUTPUT)/jingreport.txt
+
+
