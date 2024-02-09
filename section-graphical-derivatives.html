@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM Graphical Derivatives</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus Lab Manual">
+<meta property="book:author" content="Steve Simonds">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://spot.pcc.edu/math/calclabbeta"><img src="external/images/coverthumbnail.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="clm.html"><span class="title">Calculus Lab Manual:</span> <span class="subtitle">MTH 251 at Portland Community College</span></a></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section-graph-features.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-functions-derivatives-antiderivatives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-nondifferentiability.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="clm-3.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="clm-3-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="clm-3-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-all.html" class="internal"><span class="title">To All</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-the-student.html" class="internal"><span class="title">To the Student</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-the-instructor.html" class="internal"><span class="title">To the Instructor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-rates-of-change.html" class="internal"><span class="codenumber">1</span> <span class="title">Rates Of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-velocity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Velocity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-velocity.html#section-velocity-4" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-secant.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Secant Line to a Curve</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-secant.html#section-secant-6" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-difference-quotient.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The Difference Quotient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-difference-quotient.html#section-difference-quotient-8" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rates-of-change-supplementary-exercises.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-limits.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits and Continuity</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits.html#section-limits-7" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limit-laws.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Limits Laws</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limit-laws.html#section-limit-laws-3" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-indeterminate-limits.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Indeterminate Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-indeterminate-limits.html#section-indeterminate-limits-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-at-infinity.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Limits at Infinity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-at-infinity.html#section-limits-at-infinity-5" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-at-infinity-tending-to-zero.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Limits at Infinity Tending to Zero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-at-infinity-tending-to-zero.html#section-limits-at-infinity-tending-to-zero-4" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-ratios-of-infinities.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Ratios of Infinities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-ratios-of-infinities.html#section-ratios-of-infinities-4" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-nonexistent-limits.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Non-existent Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-nonexistent-limits.html#section-nonexistent-limits-5" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-vertical-asymptotes.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Vertical Asymptotes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-vertical-asymptotes.html#section-vertical-asymptotes-3" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity.html#section-continuity-4" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-discontinuities.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Discontinuities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-discontinuities.html#section-discontinuities-6" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity-on-an-interval.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Continuity on an Interval</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity-on-an-interval.html#section-continuity-on-an-interval-4" class="internal"><span class="codenumber">2.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-discontinuous-formulas.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Discontinuous Formulas</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-discontinuous-formulas.html#section-discontinuous-formulas-3" class="internal"><span class="codenumber">2.12</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-piecewise-defined-functions.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Piecewise-Defined Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-piecewise-defined-functions.html#section-piecewise-defined-functions-3" class="internal"><span class="codenumber">2.13</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="limits-and-continuity-supplementary-exercises.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-introduction-first-derivative.html" class="internal"><span class="codenumber">3</span> <span class="title">Introduction to the First Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-instantaneous-velocity.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Instantaneous Velocity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-instantaneous-velocity.html#section-instantaneous-velocity-6" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tangent-lines.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Tangent Lines</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-tangent-lines.html#section-tangent-lines-5" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-first-derivative.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The First Derivative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-first-derivative.html#section-first-derivative-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-units.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivative Units</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-units.html#section-derivative-units-5" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="introduction-first-derivative-supplementary-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-functions-derivatives-antiderivatives.html" class="internal"><span class="codenumber">4</span> <span class="title">Functions, Derivatives, and Antiderivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-graph-features.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Graph Features</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graph-features.html#section-graph-features-4" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="section-graphical-derivatives.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Graphical Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graphical-derivatives.html#section-graphical-derivatives-3" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-nondifferentiability.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Nondifferentiability</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-nondifferentiability.html#section-nondifferentiability-4" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Higher Order Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#section-higher-order-derivatives-4" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-antiderivatives.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Antiderivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-antiderivatives.html#section-antiderivatives-9" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-graphical-features-from-derivatives.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Graphical Features from Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graphical-features-from-derivatives.html#section-graphical-features-from-derivatives-3" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions-derivatives-antiderivatives-supplementary-exercises.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-derivative-formulas.html" class="internal"><span class="codenumber">5</span> <span class="title">Derivative Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-leibniz-notation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Leibniz Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-leibniz-notation.html#section-leibniz-notation-4" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-operator.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Derivative Operator</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-operator.html#section-derivative-operator-5" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Power Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-power-rule.html#section-power-rule-6" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constant-factor-rule.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Constant Factor Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constant-factor-rule.html#section-constant-factor-rule-5" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constant-divisor-rule.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Constant Divisor Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constant-divisor-rule.html#section-constant-divisor-rule-4" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sum-and-difference-rules.html" class="internal"><span class="codenumber">5.6</span> <span class="title">The Sum and Difference Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-sum-and-difference-rules.html#section-sum-and-difference-rules-5" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-rule.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Product Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-rule.html#section-product-rule-9" class="internal"><span class="codenumber">5.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-quotient-rule.html" class="internal"><span class="codenumber">5.8</span> <span class="title">The Quotient Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-quotient-rule.html#section-quotient-rule-5" class="internal"><span class="codenumber">5.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-simplification.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Simplification</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-simplification.html#section-simplification-7" class="internal"><span class="codenumber">5.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-and-quotient-together.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Product and Quotient Rules Together</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-and-quotient-together.html#section-product-and-quotient-together-3" class="internal"><span class="codenumber">5.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-formulas-and-function-behavior.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Derivative Formulas and Function Behavior</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-formulas-and-function-behavior.html#section-derivative-formulas-and-function-behavior-3" class="internal"><span class="codenumber">5.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="derivative-formulas-supplementary-exercises.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-chain-rule.html" class="internal"><span class="codenumber">6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-the-chain-rule.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Introduction to the Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-the-chain-rule.html#section-introduction-to-the-chain-rule-12" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-order-to-apply-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Order to Apply Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-order-to-apply-rules.html#section-order-to-apply-rules-3" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-not-simplifying-first.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Not Simplifying First</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-not-simplifying-first.html#section-not-simplifying-first-3" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-chain-rule-and-leibniz.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Chain Rule with Leibniz Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-chain-rule-and-leibniz.html#section-chain-rule-and-leibniz-5" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chain-rule-supplementary-exercises.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-implicit-differentiation.html" class="internal"><span class="codenumber">7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-general-implicit-differentiation.html" class="internal"><span class="codenumber">7.1</span> <span class="title">General Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-general-implicit-differentiation.html#section-general-implicit-differentiation-10" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivatives-of-inverse-functions.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivatives-of-inverse-functions.html#section-derivatives-of-inverse-functions-5" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-logarithmic-differentiation.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Logarithmic Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-logarithmic-differentiation.html#section-logarithmic-differentiation-6" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="implicit-differentiation-supplementary-exercises.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-related-rates.html" class="internal"><span class="codenumber">8</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-related-rates.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Related Rates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-related-rates.html#section-introduction-related-rates-22" class="internal"><span class="codenumber">8.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-diagrams-for-related-rates.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Diagrams for  Related Rates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-diagrams-for-related-rates.html#section-diagrams-for-related-rates-4" class="internal"><span class="codenumber">8.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="related-rates-supplementary-exercises.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-critical-numbers-graphing-from-formulas.html" class="internal"><span class="codenumber">9</span> <span class="title">Critical Numbers and Graphing from Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-motivation-for-critical-numbers.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Motivation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-motivation-for-critical-numbers.html#exercises-motivation-for-critical-numbers" class="internal"><span class="codenumber">9.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-local-extrema.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Local Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-local-extrema.html#section-local-extrema-5" class="internal"><span class="codenumber">9.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-formal-identification-of-critical-numbers.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Formal Identification of Critical Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-formal-identification-of-critical-numbers.html#section-formal-identification-of-critical-numbers-4" class="internal"><span class="codenumber">9.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sign-tables-for-the-first-derivative.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Sign Tables for the First Derivative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-sign-tables-for-the-first-derivative.html#section-sign-tables-for-the-first-derivative-3" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-inflection-points.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Inflection Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-inflection-points.html#section-inflection-points-4" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-end-behavior.html" class="internal"><span class="codenumber">9.6</span> <span class="title">End Behavior</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-end-behavior.html#section-end-behavior-8" class="internal"><span class="codenumber">9.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-making-graphs.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Making Graphs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-making-graphs.html#section-making-graphs-3" class="internal"><span class="codenumber">9.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="critical-numbers-graphing-from-formulas-supplementary-exercises.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="clm-13.html" class="internal"><span class="title">Appendices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-limit-laws.html" class="internal"><span class="codenumber">A</span> <span class="title">Limit Laws</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-derivative-formulas.html" class="internal"><span class="codenumber">B</span> <span class="title">Derivative Formulas</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-useful-algebra.html" class="internal"><span class="codenumber">C</span> <span class="title">Some Useful Rules of Algebra</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-units.html" class="internal"><span class="codenumber">D</span> <span class="title">Units of Measure</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="clm-13-6.html" class="internal"><span class="codenumber">E</span> <span class="title">Solutions to Supplemental Exercises</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-graphical-derivatives"><h2 class="heading hide-type">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Graphical Derivatives</span>
+</h2>
+<div class="para" id="section-graphical-derivatives-2">Much information about a function’s first derivative can be gleaned simply by looking at a graph of the function. In fact, a person with good visual skills can “see” the graph of the derivative while looking at the graph of the function. This activity focuses on helping you develop that skill.</div>
+<section class="exercises" id="section-graphical-derivatives-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<div class="exercisegroup" id="section-graphical-derivatives-3-1">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="section-graphical-derivatives-3-1-1">
+<div class="para" id="section-graphical-derivatives-3-1-1-1">A parabolic function is shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-graphical-derivative.html" title="Figure 4.2.1">Figure 4.2.1</a>. The next several questions are in reference to that function.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0.666666666666667%;margin-right:0.666666666666667%;">
+<div class="sbspanel top" style="width:40.5405405405405%;"><figure class="figure figure-like" id="figure-graphical-derivative"><img src="generated/latex-image/figure-graphical-derivative-2.svg" role="img" class="contained" alt="a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the following points are on the parabola and are emphasized with a solid dot: (-5,-12), (-3,-2), (-1,4), (1,6), (3,4), (5,-2), and (7,-12)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.1<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{g}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:40.5405405405405%;"><figure class="figure figure-like" id="figure-graphical-derivative-plot"><img src="generated/latex-image/figure-graphical-derivative-plot-2.svg" role="img" class="contained" alt="a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the plot is of the same function from the previous image, but no points are emphasized in this version"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.2<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{g}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel fixed-width top" style="width:16.2162162162162%;"><figure class="table table-like" id="table-graphical-derivative"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b2 r0 l0 t3 lines"><span class="process-math">\(y\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(-4\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+</div></div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="section-graphical-derivatives-3-1-2"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-2-1-1">Several values of <span class="process-math">\(\fd{g}\)</span> are given in <a href="" class="xref" data-knowl="./knowl/xref/table-graphical-derivative.html" title="Table 4.2.3">Table 4.2.3</a>. For each given value of <span class="process-math">\(x\)</span> draw onto <a href="" class="xref" data-knowl="./knowl/xref/figure-graphical-derivative.html" title="Figure 4.2.1">Figure 4.2.1</a> a nice long line segment at the corresponding point on <span class="process-math">\(g\)</span> whose slope is equal to the value of <span class="process-math">\(\fd{g}\text{.}\)</span> If we think of these line segments as actual lines, what do we call the lines?</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-1-3"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-3-1-1">What is the value of <span class="process-math">\(\fe{\fd{g}}{1}\text{?}\)</span> How do you know? Enter that value into <a href="" class="xref" data-knowl="./knowl/xref/table-graphical-derivative.html" title="Table 4.2.3">Table 4.2.3</a>.</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-1-4"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-4-1-1">The function <span class="process-math">\(g\)</span> is symmetric across the line <span class="process-math">\(x=1\text{;}\)</span> that is, if we move equal distance to the left and right from this line the corresponding <span class="process-math">\(y\)</span>-coordinates on <span class="process-math">\(g\)</span> are always equal. Notice that the slopes of the tangent lines are “equal but opposite” at points that are equally removed from the axis of symmetry; this is reflected in the values of <span class="process-math">\(\fe{\fd{g}}{-1}\)</span> and <span class="process-math">\(\fe{\fd{g}}{3}\text{.}\)</span> Use the idea of “equal but opposite slope equidistant from the axis of symmetry” to complete <a href="" class="xref" data-knowl="./knowl/xref/table-graphical-derivative.html" title="Table 4.2.3">Table 4.2.3</a>.</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-1-5"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-5-1-1">Plot the points from <a href="" class="xref" data-knowl="./knowl/xref/table-graphical-derivative.html" title="Table 4.2.3">Table 4.2.3</a> onto <a href="" class="xref" data-knowl="./knowl/xref/figure-graphical-derivative-plot.html" title="Figure 4.2.2">Figure 4.2.2</a> and connect the dots. Determine the formula for the resultant linear function.</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-1-6"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-6-1-1">The formula for <span class="process-math">\(\fe{g}{x}\)</span> is <span class="process-math">\(-0.5x^2+x+5.5\text{.}\)</span> Use <a href="" class="xref" data-knowl="./knowl/xref/definition-first-derivative.html" title="Definition 3.3.1: The First Derivative Function">Definition 3.3.1</a> to determine the formula for <span class="process-math">\(\fe{\fd{g}}{x}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-1-7"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-1-7-1-1">The line you drew onto <a href="" class="xref" data-knowl="./knowl/xref/figure-graphical-derivative-plot.html" title="Figure 4.2.2">Figure 4.2.2</a> is <em class="emphasis">not</em> a tangent line to <span class="process-math">\(g\text{.}\)</span> Just what exactly is this line?</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="section-graphical-derivatives-3-2">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="section-graphical-derivatives-3-2-1">
+<div class="para" id="section-graphical-derivatives-3-2-1-1">A function <span class="process-math">\(f\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-cubic.html" title="Figure 4.2.4">Figure 4.2.4</a> and the corresponding first derivative function <span class="process-math">\(\fd{f}\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-cubic-derivative.html" title="Figure 4.2.5">Figure 4.2.5</a>. Answer each of the following questions referencing these two functions.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-cubic"><img src="generated/latex-image/figure-cubic-2.svg" role="img" class="contained" alt="the graph of a function; the curve enters from below at about (-4.2,-7), heading slightly to the right as it mainly moves upward; near (-2.5,6), the curve bends by a lot, smoothly, until it reaches about (-2,6.2), at which point the curve turns around and begins moving predominantly downward and to the right; it passes through (0,1); as it reaches about (1.5,-4), the curve bends by a lot, smoothly, so that it reaches about (2,-4.2) and turns around again; from here it moves predominantly upward and to the right, passing through (3,-2), and exiting the graph at about (4,7)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.4<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{f}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-cubic-derivative"><img src="generated/latex-image/figure-cubic-derivative-2.svg" role="img" class="contained" alt="the graph of a function; the overall appearance resembles a parabola, although there is no solid evidence that it is a true parabola; the curve enters from above at about (-3.5,7), moving mostly downward and slightly to the right; as it moves downward, it tapers more and more, passing through -2 on the x-axis, and then smoothly flattening out at -4 on the y-axis; then the curve bends upward, bending more and more upward as it moves to the right; it passes through (3,5); it exits the graph at about (3.5,7)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.5<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{\fd{f}}{x}\)</span></figcaption></figure></div>
+</div></div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="section-graphical-derivatives-3-2-2"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-2-2-1-1">Draw the tangent line to <span class="process-math">\(f\)</span> at the three points indicated in <a href="" class="xref" data-knowl="./knowl/xref/figure-cubic.html" title="Figure 4.2.4">Figure 4.2.4</a> after first using the graph of <span class="process-math">\(\fd{f}\)</span> to determine the exact slope of the respective tangent lines.</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-2-3"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-2-3-1-1">Write a sentence relating the slope of the tangent line to <span class="process-math">\(f\)</span> with the corresponding <span class="process-math">\(y\)</span>-coordinate on <span class="process-math">\(\fd{f}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-2-4"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-2-4-1-1">Copy each of the following sentences onto your paper and supply the words or phrases that correctly complete each sentence.</div> <div class="para logical" id="section-graphical-derivatives-3-2-4-1-2"><ul class="disc">
+<li id="section-graphical-derivatives-3-2-4-1-2-1-1"><div class="para" id="section-graphical-derivatives-3-2-4-1-2-1-1-1">Over the interval where <span class="process-math">\(\fd{f}\)</span> is negative, <span class="process-math">\(f\)</span> is …</div></li>
+<li id="section-graphical-derivatives-3-2-4-1-2-1-2"><div class="para" id="section-graphical-derivatives-3-2-4-1-2-1-2-1">Over the interval where <span class="process-math">\(\fd{f}\)</span> is positive, <span class="process-math">\(f\)</span> is …</div></li>
+<li id="section-graphical-derivatives-3-2-4-1-2-1-3"><div class="para" id="section-graphical-derivatives-3-2-4-1-2-1-3-1">Over the interval where <span class="process-math">\(\fd{f}\)</span> is increasing, <span class="process-math">\(f\)</span> is …</div></li>
+<li id="section-graphical-derivatives-3-2-4-1-2-1-4"><div class="para" id="section-graphical-derivatives-3-2-4-1-2-1-4-1">Over the interval where <span class="process-math">\(\fd{f}\)</span> is decreasing, <span class="process-math">\(f\)</span> is …</div></li>
+</ul></div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="section-graphical-derivatives-3-3"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="section-graphical-derivatives-3-3-1-1">In each of <a href="" class="xref" data-knowl="./knowl/xref/figure-sine.html" title="Figure 4.2.6">Figures 4.2.6</a> and <a href="" class="xref" data-knowl="./knowl/xref/figure-rational.html" title="Figure 4.2.7">Figure 4.2.7</a> a function (the solid curve) is given; both of these functions are symmetric about the <span class="process-math">\(y\)</span>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <span class="process-math">\(\ointerval{0}{7}\text{.}\)</span> Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <span class="process-math">\(\ointerval{-7}{0}\text{.}\)</span> Please note that a function that is symmetric across a vertical line has a first derivative that is symmetric about a point.  Similarly, a function that is symmetric about a point has a first derivative that is symmetric across a vertical line.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-sine"><img src="generated/latex-image/figure-sine-2.svg" role="img" class="contained" alt="the graph of two functions; the first is identified as y=g(x), and it has an overall appearance of a sinusoidal wave; the curve enters from the left, reaching a low point at (-6,2), then a high point at (-3,6), then a low point at (0,2), then a high point at (3,6), then a low point at (6,2), and then it exits the graph to the right; a second curve is on the same graph, and is denoted y=g’(x); this curve is only partially plotted; only the portion on the right half of the graph is plotted; this curve also appears to have a sinusoidal shape; the part we see abruptly starts at (0,0), moving up to a peak at (1.5,2), then down to a low point at (4.5,2), then upward exiting the graph at about (7,1.5)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.6<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{f}{x}\)</span> and part of the curve <span class="process-math">\(y=\fe{\fd{f}}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-rational"><img src="generated/latex-image/figure-rational-2.svg" role="img" class="contained" alt="the graph of two functions; the first is identified as y=g(x); it enters the graph from the left at about (-7,3.5), moving downward and to the right with an almost constant slope; it reaches about (-1,1) and smoothly bends upward so that it becomes almost vertical; the curve exits the graph at about (-0.3,7); a second portion of this same curve comes in on the right half of the graph, symmetrically to the first portion; it comes in from the top at about (0.3,7), moves mostly downward and ever so slightly to the right until reaching about (1,1), where it smoothly bends so that it continues moving upward and to the right, with a seemingly constant slop until it exits the graph at about (7,3.5); a second curve is identified as y=g’(x); only the portion on the right half of the graph is plotted; this portion enters the graph from below at about (0.2,-7), moves mostly upward to (1,0), where it bends smoothly, so that it continues moving mostly rightward, becoming closer and closer to the horizontal line y=1/2; this portion of the curve exits the graph at about (7,1/2)"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.7<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{f}{x}\)</span> and part of the curve <span class="process-math">\(y=\fe{\fd{f}}{x}\)</span></figcaption></figure></div>
+</div></div></article><div class="exercisegroup" id="section-graphical-derivatives-3-4">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="section-graphical-derivatives-3-4-1">
+<div class="para" id="section-graphical-derivatives-3-4-1-1">A graph of the function <span class="process-math">\(h\)</span> given by <span class="process-math">\(\fe{h}{x}=\frac{1}{x}\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-one-over-x.html" title="Figure 4.2.8">Figure 4.2.8</a>.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-one-over-x"><img src="generated/latex-image/figure-one-over-x-2.svg" role="img" class="contained" alt="a graph of a function whose curve has two portions; the first portion enters from the left, only a small bit below the x-axis; as it travels to the right, it slowly moves more and more downward; at about (-1,-1), it bends much more downward, moving almost vertically downward and exiting the graph a bit to the left of the y-axis; the second portion is a symmetric opposite from the first; the second portion enters the graph from the top, just to the right of the y-axis; it moves mostly straight down and slightly to the right, until at about (1,1) it smoothly bends rightward; it continues moving rightward, moving slightly downard too, until it leaves the graph on the right side slightly above the x-axis"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.8<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{h}{x}=\frac{1}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-derivative-of-one-over-x"><img src="generated/latex-image/figure-derivative-of-one-over-x-2.svg" role="img" class="contained" alt="a blank graph, with x-axis and y-axis each ranging from -7 to 7"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.9<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{\fd{h}}{x}\)</span></figcaption></figure></div>
+</div></div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercise-negative-derivative-of-one-over-x"><h5 class="heading"><span class="codenumber">11<span class="period">.</span></span></h5>
+<div class="para" id="exercise-negative-derivative-of-one-over-x-1-1">Except at <span class="process-math">\(0\text{,}\)</span> there is something that is always true about the value of <span class="process-math">\(\fd{h}\text{;}\)</span> what is the common trait?</div></article><article class="exercise exercise-like" id="exercise-derivative-of-one-over-x"><h5 class="heading"><span class="codenumber">12<span class="period">.</span></span></h5>
+<div class="para" id="exercise-derivative-of-one-over-x-1-1">Use <a href="" class="xref" data-knowl="./knowl/xref/definition-first-derivative.html" title="Definition 3.3.1: The First Derivative Function">Definition 3.3.1</a> to find the formula for <span class="process-math">\(\fe{\fd{h}}{x}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-4-4"><h5 class="heading"><span class="codenumber">13<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-4-4-1-1">Does the formula for <span class="process-math">\(\fe{\fd{h}}{x}\)</span> support your answer to <a href="" class="xref" data-knowl="./knowl/xref/exercise-negative-derivative-of-one-over-x.html" title="Exercise 4.2.11">Exercise 4.2.11</a>?</div></article><article class="exercise exercise-like" id="exercise-asymptotes-one-over-x"><h5 class="heading"><span class="codenumber">14<span class="period">.</span></span></h5>
+<div class="para" id="exercise-asymptotes-one-over-x-1-1">Use the formula for <span class="process-math">\(\fe{\fd{h}}{x}\)</span> to determine the horizontal and vertical asymptotes to the graph of <span class="process-math">\(y=\fe{\fd{h}}{x}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-4-6"><h5 class="heading"><span class="codenumber">15<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-4-6-1-1">Keeping it simple, draw onto <a href="" class="xref" data-knowl="./knowl/xref/figure-derivative-of-one-over-x.html" title="Figure 4.2.9">Figure 4.2.9</a> a curve with the asymptotes found in <a href="" class="xref" data-knowl="./knowl/xref/exercise-asymptotes-one-over-x.html" title="Exercise 4.2.14">Exercise 4.2.14</a> and the property determined in <a href="" class="xref" data-knowl="./knowl/xref/exercise-negative-derivative-of-one-over-x.html" title="Exercise 4.2.11">Exercise 4.2.11</a>. Does the curve you drew have the properties you would expect to see in the first derivative of <span class="process-math">\(h\text{?}\)</span> For example, <span class="process-math">\(h\)</span> is concave down over <span class="process-math">\(\ointerval{-\infty}{0}\text{,}\)</span> and concave up over <span class="process-math">\(\ointerval{0}{\infty}\text{;}\)</span> what are the corresponding differences in the behavior of <span class="process-math">\(\fd{h}\)</span> over those two intervals?</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="section-graphical-derivatives-3-5"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para" id="section-graphical-derivatives-3-5-1-1">A graph of the function <span class="process-math">\(g\)</span> is shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-arctangent.html" title="Figure 4.2.10">Figure 4.2.10</a>. The absolute minimum value ever obtained by <span class="process-math">\(\fd{g}\)</span> is <span class="process-math">\(-3\text{.}\)</span> With that in mind, draw <span class="process-math">\(\fd{g}\)</span> onto <a href="" class="xref" data-knowl="./knowl/xref/figure-derivative-of-arctangent.html" title="Figure 4.2.11">Figure 4.2.11</a>. Make sure that you draw and label any and all necessary asymptotes. Please note that <span class="process-math">\(g\)</span> is symmetric about the point <span class="process-math">\(\point{1}{2}\text{.}\)</span>
+</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-arctangent"><img src="generated/latex-image/figure-arctangent-2.svg" role="img" class="contained" alt="a grpah of a function that enters from the left just below y=5; the curve moves rightward fairly flat, but begins to move more and more downward as well; it reaches its steepest downward point at (1,2), and then continues to move right, but bends less and less downward; by the time it reaches the right edge of the graph, it is essentially horizontal, and exits the graph just above the line y=-1"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.10<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{g}{x}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-derivative-of-arctangent"><img src="generated/latex-image/figure-derivative-of-arctangent-2.svg" role="img" class="contained" alt="a blank graph, with x-axis and y-axis each ranging from -7 to 7"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.11<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{\fd{g}}{x}\)</span></figcaption></figure></div>
+</div></div></article><div class="exercisegroup" id="section-graphical-derivatives-3-6">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="section-graphical-derivatives-3-6-1">
+<div class="para" id="section-graphical-derivatives-3-6-1-1">Answer the following questions in reference to the function <span class="process-math">\(w\text{,}\)</span> shown in <a href="" class="xref" data-knowl="./knowl/xref/figure-inflection-points.html" title="Figure 4.2.12">Figure 4.2.12</a>.</div> <figure class="figure figure-like" id="figure-inflection-points"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/figure-inflection-points-2.svg" role="img" class="contained" alt="a graph with x-axis ranging from -1 to 10, and y-axis ranging from -1 to 10; the curve enters from below, slightly to the left of the y-axis; it passes through the origin, and continues moving mostly upward for a while; but it bends more and more to the right, until it reaches about (2,5.1), where it temporarily appears to be flat; then it bends a little upward briefly, flattening out again at about (4,5.5); now the curve turns downward as it keeps traveling to the right; it eventually reaches a low point at about (7,0.7), where it smoothly turns around and travels predominantly upwards and slightly to the right; the curve exits the graph at about (8.3,10)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.12<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{w}{x}\)</span></figcaption></figure>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="section-graphical-derivatives-3-6-2"><h5 class="heading"><span class="codenumber">17<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-6-2-1-1">An <dfn class="terminology">inflection point</dfn> is a point where the function is continuous and the concavity of the function changes.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1%;margin-right:1%;">
+<div class="sbspanel top" style="width:32.6530612244898%;"><div class="para" id="section-graphical-derivatives-3-6-2-1-2-1">The inflection points on <span class="process-math">\(w\)</span> occur at <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(3.25\text{,}\)</span> and <span class="process-math">\(6\text{.}\)</span> With that in mind, over each interval stated in <a href="" class="xref" data-knowl="./knowl/xref/table-inflection-points.html" title="Table 4.2.13">Table 4.2.13</a> exactly two of the properties from its caption apply to <span class="process-math">\(\fd{w}\text{.}\)</span> Complete <a href="" class="xref" data-knowl="./knowl/xref/table-inflection-points.html" title="Table 4.2.13">Table 4.2.13</a> with the appropriate pairs of properties.</div></div>
+<div class="sbspanel fixed-width top" style="width:65.3061224489796%;"><figure class="table table-like" id="table-inflection-points"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines">Interval</td>
+<td class="c m b2 r0 l0 t3 lines">Properties of <span class="process-math">\(\fd{w}\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{-\infty}{2}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\phantom{\text{positive/negative, increasing/decreasing}}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{2}{3.25}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{3.25}{4}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{4}{6}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{6}{7}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ointerval{7}{\infty}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.13<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+</div></div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-6-3"><h5 class="heading"><span class="codenumber">18<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-6-3-1-1">In <a href="" class="xref" data-knowl="./knowl/xref/table-values-for-w-prime.html" title="Table 4.2.14">Table 4.2.14</a>, three possible values are given for <span class="process-math">\(\fd{w}\)</span> at several values of <span class="process-math">\(x\text{.}\)</span> In each case, one of the values is correct. Use tangent lines to <span class="process-math">\(w\)</span> to determine each of the correct values.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel fixed-width bottom" style="width:48.4536082474227%;"><figure class="table table-like" id="table-values-for-w-prime"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t3 lines"><span class="process-math">\(x\)</span></td>
+<td class="c m b2 r0 l0 t3 lines">Proposed values</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\sfrac{2}{3}\)</span> or <span class="process-math">\(\sfrac{8}{3}\)</span> or <span class="process-math">\(\sfrac{28}{3}\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\sfrac{1}{2}\)</span> or <span class="process-math">\(\sfrac{3}{2}\)</span> or <span class="process-math">\(\sfrac{5}{2}\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(\sfrac{1}{3}\)</span> or <span class="process-math">\(1\)</span> or <span class="process-math">\(3\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(-\sfrac{1}{2}\)</span> or <span class="process-math">\(-1\)</span> or <span class="process-math">\(-\sfrac{3}{2}\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(-\sfrac{4}{3}\)</span> or <span class="process-math">\(-\sfrac{8}{3}\)</span> or <span class="process-math">\(-4\)</span>
+</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">
+<span class="process-math">\(1\)</span> or <span class="process-math">\(6\)</span> or <span class="process-math">\(12\)</span>
+</td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.2.14<span class="period">.</span></span><span class="space"> </span></figcaption></figure></div>
+<div class="sbspanel bottom" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-w-prime"><img src="generated/latex-image/figure-w-prime-2.svg" role="img" class="contained" alt="a blank graph, with x-axis ranging from -1 to 10, and y-axis ranging from -12 to 12"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.2.15<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{\fd{w}}{x}\)</span></figcaption></figure></div>
+</div></div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-6-4"><h5 class="heading"><span class="codenumber">19<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-6-4-1-1">The value of <span class="process-math">\(\fd{w}\)</span> is the same at <span class="process-math">\(2\text{,}\)</span> <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(7\text{.}\)</span> What is this common value?</div></article><article class="exercise exercise-like" id="section-graphical-derivatives-3-6-5"><h5 class="heading"><span class="codenumber">20<span class="period">.</span></span></h5>
+<div class="para" id="section-graphical-derivatives-3-6-5-1-1">Put it all together and draw <span class="process-math">\(\fd{w}\)</span> onto <a href="" class="xref" data-knowl="./knowl/xref/figure-w-prime.html" title="Figure 4.2.15">Figure 4.2.15</a>.</div></article>
+</div>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-graph-features.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-nondifferentiability.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lla7.html ./knowl/xref/lla5.html ./knowl/xref/lla1.html ./knowl/xref/lla6.html ./knowl/xref/llr1.html ./knowl/xref/llr2.html">
+\begin{align*}
+\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)\\
+&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}\\
+&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}\\
+&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\knowl{./knowl/xref/lla7.html}{\text{Theorem A.0.10}}\\
+&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\knowl{./knowl/xref/lla5.html}{\text{Theorem A.0.8}}\\
+&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\knowl{./knowl/xref/lla1.html}{\text{Theorem A.0.4}}\\
+&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\knowl{./knowl/xref/lla6.html}{\text{Theorem A.0.9}}\\
+&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\knowl{./knowl/xref/llr1.html}{\text{Theorem A.0.1}}, \knowl{./knowl/xref/llr2.html}{\text{R2 A.0.2}}\\
+&amp;=\frac{1}{2}
+\end{align*}
+</div>
+<div class="para">The form of each limit above was <span class="process-math">\(\frac{0}{0}\)</span> until the fourth line, where we were able to begin applying limit laws.</div>
+</div></article><span class="incontext"><a class="internal" href="section-indeterminate-limits.html#example-second-indeterminate">in-context</a></span>
+</body>
+</html>

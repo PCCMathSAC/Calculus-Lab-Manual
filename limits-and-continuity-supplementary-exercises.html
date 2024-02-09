@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM Supplement</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Calculus Lab Manual">
+<meta property="book:author" content="Steve Simonds">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://spot.pcc.edu/math/calclabbeta"><img src="external/images/coverthumbnail.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="clm.html"><span class="title">Calculus Lab Manual:</span> <span class="subtitle">MTH 251 at Portland Community College</span></a></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="section-piecewise-defined-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter-limits.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chapter-introduction-first-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+\newcommand{\fd}[1]{#1'}
+\newcommand{\sd}[1]{#1''}
+\newcommand{\td}[1]{#1'''}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\newcommand{\sfrac}[2]{{#1}/{#2}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="clm-3.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="clm-3-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="clm-3-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-all.html" class="internal"><span class="title">To All</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-the-student.html" class="internal"><span class="title">To the Student</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="to-the-instructor.html" class="internal"><span class="title">To the Instructor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-rates-of-change.html" class="internal"><span class="codenumber">1</span> <span class="title">Rates Of Change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-velocity.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Velocity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-velocity.html#section-velocity-4" class="internal"><span class="codenumber">1.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-secant.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Secant Line to a Curve</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-secant.html#section-secant-6" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-difference-quotient.html" class="internal"><span class="codenumber">1.3</span> <span class="title">The Difference Quotient</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-difference-quotient.html#section-difference-quotient-8" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rates-of-change-supplementary-exercises.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter-limits.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits and Continuity</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits.html#section-limits-7" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limit-laws.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Limits Laws</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limit-laws.html#section-limit-laws-3" class="internal"><span class="codenumber">2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-indeterminate-limits.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Indeterminate Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-indeterminate-limits.html#section-indeterminate-limits-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-at-infinity.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Limits at Infinity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-at-infinity.html#section-limits-at-infinity-5" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-limits-at-infinity-tending-to-zero.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Limits at Infinity Tending to Zero</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-limits-at-infinity-tending-to-zero.html#section-limits-at-infinity-tending-to-zero-4" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-ratios-of-infinities.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Ratios of Infinities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-ratios-of-infinities.html#section-ratios-of-infinities-4" class="internal"><span class="codenumber">2.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-nonexistent-limits.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Non-existent Limits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-nonexistent-limits.html#section-nonexistent-limits-5" class="internal"><span class="codenumber">2.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-vertical-asymptotes.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Vertical Asymptotes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-vertical-asymptotes.html#section-vertical-asymptotes-3" class="internal"><span class="codenumber">2.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Continuity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity.html#section-continuity-4" class="internal"><span class="codenumber">2.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-discontinuities.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Discontinuities</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-discontinuities.html#section-discontinuities-6" class="internal"><span class="codenumber">2.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-continuity-on-an-interval.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Continuity on an Interval</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-continuity-on-an-interval.html#section-continuity-on-an-interval-4" class="internal"><span class="codenumber">2.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-discontinuous-formulas.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Discontinuous Formulas</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-discontinuous-formulas.html#section-discontinuous-formulas-3" class="internal"><span class="codenumber">2.12</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-piecewise-defined-functions.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Piecewise-Defined Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-piecewise-defined-functions.html#section-piecewise-defined-functions-3" class="internal"><span class="codenumber">2.13</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="limits-and-continuity-supplementary-exercises.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-introduction-first-derivative.html" class="internal"><span class="codenumber">3</span> <span class="title">Introduction to the First Derivative</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-instantaneous-velocity.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Instantaneous Velocity</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-instantaneous-velocity.html#section-instantaneous-velocity-6" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-tangent-lines.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Tangent Lines</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-tangent-lines.html#section-tangent-lines-5" class="internal"><span class="codenumber">3.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-first-derivative.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The First Derivative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-first-derivative.html#section-first-derivative-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-units.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Derivative Units</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-units.html#section-derivative-units-5" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="introduction-first-derivative-supplementary-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-functions-derivatives-antiderivatives.html" class="internal"><span class="codenumber">4</span> <span class="title">Functions, Derivatives, and Antiderivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-graph-features.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Graph Features</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graph-features.html#section-graph-features-4" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-graphical-derivatives.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Graphical Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graphical-derivatives.html#section-graphical-derivatives-3" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-nondifferentiability.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Nondifferentiability</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-nondifferentiability.html#section-nondifferentiability-4" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-higher-order-derivatives.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Higher Order Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-higher-order-derivatives.html#section-higher-order-derivatives-4" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-antiderivatives.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Antiderivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-antiderivatives.html#section-antiderivatives-9" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-graphical-features-from-derivatives.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Graphical Features from Derivatives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-graphical-features-from-derivatives.html#section-graphical-features-from-derivatives-3" class="internal"><span class="codenumber">4.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions-derivatives-antiderivatives-supplementary-exercises.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-derivative-formulas.html" class="internal"><span class="codenumber">5</span> <span class="title">Derivative Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-leibniz-notation.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Leibniz Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-leibniz-notation.html#section-leibniz-notation-4" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-operator.html" class="internal"><span class="codenumber">5.2</span> <span class="title">The Derivative Operator</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-operator.html#section-derivative-operator-5" class="internal"><span class="codenumber">5.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-power-rule.html" class="internal"><span class="codenumber">5.3</span> <span class="title">The Power Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-power-rule.html#section-power-rule-6" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constant-factor-rule.html" class="internal"><span class="codenumber">5.4</span> <span class="title">The Constant Factor Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constant-factor-rule.html#section-constant-factor-rule-5" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-constant-divisor-rule.html" class="internal"><span class="codenumber">5.5</span> <span class="title">The Constant Divisor Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-constant-divisor-rule.html#section-constant-divisor-rule-4" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sum-and-difference-rules.html" class="internal"><span class="codenumber">5.6</span> <span class="title">The Sum and Difference Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-sum-and-difference-rules.html#section-sum-and-difference-rules-5" class="internal"><span class="codenumber">5.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-rule.html" class="internal"><span class="codenumber">5.7</span> <span class="title">The Product Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-rule.html#section-product-rule-9" class="internal"><span class="codenumber">5.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-quotient-rule.html" class="internal"><span class="codenumber">5.8</span> <span class="title">The Quotient Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-quotient-rule.html#section-quotient-rule-5" class="internal"><span class="codenumber">5.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-simplification.html" class="internal"><span class="codenumber">5.9</span> <span class="title">Simplification</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-simplification.html#section-simplification-7" class="internal"><span class="codenumber">5.9</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-product-and-quotient-together.html" class="internal"><span class="codenumber">5.10</span> <span class="title">Product and Quotient Rules Together</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-product-and-quotient-together.html#section-product-and-quotient-together-3" class="internal"><span class="codenumber">5.10</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivative-formulas-and-function-behavior.html" class="internal"><span class="codenumber">5.11</span> <span class="title">Derivative Formulas and Function Behavior</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivative-formulas-and-function-behavior.html#section-derivative-formulas-and-function-behavior-3" class="internal"><span class="codenumber">5.11</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="derivative-formulas-supplementary-exercises.html" class="internal"><span class="codenumber">5.12</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-chain-rule.html" class="internal"><span class="codenumber">6</span> <span class="title">The Chain Rule</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-to-the-chain-rule.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Introduction to the Chain Rule</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-to-the-chain-rule.html#section-introduction-to-the-chain-rule-12" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-order-to-apply-rules.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Order to Apply Rules</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-order-to-apply-rules.html#section-order-to-apply-rules-3" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-not-simplifying-first.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Not Simplifying First</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-not-simplifying-first.html#section-not-simplifying-first-3" class="internal"><span class="codenumber">6.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-chain-rule-and-leibniz.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Chain Rule with Leibniz Notation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-chain-rule-and-leibniz.html#section-chain-rule-and-leibniz-5" class="internal"><span class="codenumber">6.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chain-rule-supplementary-exercises.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-implicit-differentiation.html" class="internal"><span class="codenumber">7</span> <span class="title">Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-general-implicit-differentiation.html" class="internal"><span class="codenumber">7.1</span> <span class="title">General Implicit Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-general-implicit-differentiation.html#section-general-implicit-differentiation-10" class="internal"><span class="codenumber">7.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-derivatives-of-inverse-functions.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Derivatives of Inverse Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-derivatives-of-inverse-functions.html#section-derivatives-of-inverse-functions-5" class="internal"><span class="codenumber">7.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-logarithmic-differentiation.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Logarithmic Differentiation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-logarithmic-differentiation.html#section-logarithmic-differentiation-6" class="internal"><span class="codenumber">7.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="implicit-differentiation-supplementary-exercises.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-related-rates.html" class="internal"><span class="codenumber">8</span> <span class="title">Related Rates</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-introduction-related-rates.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Introduction to Related Rates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-introduction-related-rates.html#section-introduction-related-rates-22" class="internal"><span class="codenumber">8.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-diagrams-for-related-rates.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Diagrams for  Related Rates</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-diagrams-for-related-rates.html#section-diagrams-for-related-rates-4" class="internal"><span class="codenumber">8.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="related-rates-supplementary-exercises.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter-critical-numbers-graphing-from-formulas.html" class="internal"><span class="codenumber">9</span> <span class="title">Critical Numbers and Graphing from Formulas</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-motivation-for-critical-numbers.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Motivation</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-motivation-for-critical-numbers.html#exercises-motivation-for-critical-numbers" class="internal"><span class="codenumber">9.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-local-extrema.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Local Extrema</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-local-extrema.html#section-local-extrema-5" class="internal"><span class="codenumber">9.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-formal-identification-of-critical-numbers.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Formal Identification of Critical Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-formal-identification-of-critical-numbers.html#section-formal-identification-of-critical-numbers-4" class="internal"><span class="codenumber">9.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-sign-tables-for-the-first-derivative.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Sign Tables for the First Derivative</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-sign-tables-for-the-first-derivative.html#section-sign-tables-for-the-first-derivative-3" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-inflection-points.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Inflection Points</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-inflection-points.html#section-inflection-points-4" class="internal"><span class="codenumber">9.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-end-behavior.html" class="internal"><span class="codenumber">9.6</span> <span class="title">End Behavior</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-end-behavior.html#section-end-behavior-8" class="internal"><span class="codenumber">9.6</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-making-graphs.html" class="internal"><span class="codenumber">9.7</span> <span class="title">Making Graphs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-making-graphs.html#section-making-graphs-3" class="internal"><span class="codenumber">9.7</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="critical-numbers-graphing-from-formulas-supplementary-exercises.html" class="internal"><span class="codenumber">9.8</span> <span class="title">Supplement</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="clm-13.html" class="internal"><span class="title">Appendices</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-limit-laws.html" class="internal"><span class="codenumber">A</span> <span class="title">Limit Laws</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-derivative-formulas.html" class="internal"><span class="codenumber">B</span> <span class="title">Derivative Formulas</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-useful-algebra.html" class="internal"><span class="codenumber">C</span> <span class="title">Some Useful Rules of Algebra</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-units.html" class="internal"><span class="codenumber">D</span> <span class="title">Units of Measure</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="clm-13-6.html" class="internal"><span class="codenumber">E</span> <span class="title">Solutions to Supplemental Exercises</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="limits-and-continuity-supplementary-exercises"><h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">2.14</span><span class="space"> </span><span class="title">Supplement</span>
+</h2>
+<div class="exercisegroup" id="exercisegroup-limits-supplement-first">
+<h3 class="heading"><span class="title">Exercise Group.</span></h3>
+<div class="introduction" id="exercisegroup-limits-supplement-first-1"><div class="para" id="exercisegroup-limits-supplement-first-1-1">For <a href="" class="xref" data-knowl="./knowl/xref/exercisegroup-limits-supplement-first.html" title="Exercise Group 2.14.1–5">Exercises 2.14.1–5</a>, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for <a href="" class="xref" data-knowl="./knowl/xref/exercise-limits-supplement-first.html" title="Exercise 2.14.1">Exercise 2.14.1</a> has been given to help you understand the instructions.</div></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="exercise-limits-supplement-first"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r t b2 r0 l0 t3 lines"><span class="process-math">\(t\)</span></td>
+<td class="c t b2 r0 l0 t3 lines"><span class="process-math">\(\fe{g}{t}\)</span></td>
+</tr>
+<tr>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(-10{,}000\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(99.97\)</span></td>
+</tr>
+<tr>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(-100{,}000\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(999.997\)</span></td>
+</tr>
+<tr>
+<td class="r t b3 r0 l0 t0 lines"><span class="process-math">\(-1{,}000{,}000\)</span></td>
+<td class="c t b3 r0 l0 t0 lines"><span class="process-math">\(9999.9997\)</span></td>
+</tr>
+</table></div> <div class="para" id="exercise-limits-supplement-first-1-2">
+<em class="alert">Answer:</em><span class="process-math">\(\lim\limits_{t\to-\infty}\fe{g}{t}=\infty\text{.}\)</span>
+</div> <div class="para" id="exercise-limits-supplement-first-1-3">The limit does <em class="emphasis">not</em> exist.</div>
+<div class="solutions">
+<details id="exercise-limits-supplement-first-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="exercise-limits-supplement-first-2-1">
+<span class="process-math">\(\lim\limits_{t\to-\infty}\fe{g}{t}=\infty\text{;}\)</span> <span class="process-math">\(\lim\limits_{t\to-\infty}\fe{g}{t}\)</span> does not exist.</div></div></details><details id="exercise-limits-supplement-first-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="exercise-limits-supplement-first-3-1">The relevant pattern in the <span class="process-math">\(y\)</span> column is that <span class="process-math">\(y\)</span> appears to be positive and growing by a little more than a factor of <span class="process-math">\(10\)</span> every time <span class="process-math">\(t\)</span> is negative and grows by a factor of <span class="process-math">\(10\text{.}\)</span> It’s not guaranteed, but this suggest that <span class="process-math">\(\lim\limits_{t\to-\infty}\fe{g}{t}=\infty\text{.}\)</span> In this circumstance, we say that <span class="process-math">\(\lim\limits_{t\to-\infty}\fe{g}{t}\)</span> does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercisegroup-limits-supplement-first-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r t b2 r0 l0 t3 lines"><span class="process-math">\(x\)</span></td>
+<td class="r t b2 r0 l0 t3 lines"><span class="process-math">\(\fe{f}{x}\)</span></td>
+</tr>
+<tr>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(51{,}000\)</span></td>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(-3.2\times10^{-5}\)</span></td>
+</tr>
+<tr>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(510{,}000\)</span></td>
+<td class="r t b0 r0 l0 t0 lines"><span class="process-math">\(-3.02\times10^{-7}\)</span></td>
+</tr>
+<tr>
+<td class="r t b3 r0 l0 t0 lines"><span class="process-math">\(5{,}100{,}000\)</span></td>
+<td class="r t b3 r0 l0 t0 lines"><span class="process-math">\(-3.002\times10^{-9}\)</span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="exercisegroup-limits-supplement-first-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="exercisegroup-limits-supplement-first-3-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\fe{f}{x}=0\text{;}\)</span> <span class="process-math">\(\lim\limits_{x\to0}\fe{f}{x}\)</span> exists.</div></div></details><details id="exercisegroup-limits-supplement-first-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="exercisegroup-limits-supplement-first-3-3-1">The relevant pattern in the <span class="process-math">\(y\)</span> column is the powers of <span class="process-math">\(10\text{.}\)</span>  The first nonzero digit is moving farther and farther to the right of the decimal point. So the <span class="process-math">\(y\)</span>-values are approaching zero. This suggest that <span class="process-math">\(\lim\limits_{x\to\infty}\fe{f}{x}=0\text{.}\)</span> So <span class="process-math">\(\lim\limits_{x\to\infty}\fe{f}{x}\)</span> exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercisegroup-limits-supplement-first-4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l t b2 r0 l0 t3 lines"><span class="process-math">\(t\)</span></td>
+<td class="l t b2 r0 l0 t3 lines"><span class="process-math">\(\fe{z}{t}\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.33\)</span></td>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.66\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.333\)</span></td>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.666\)</span></td>
+</tr>
+<tr>
+<td class="l t b3 r0 l0 t0 lines"><span class="process-math">\(0.3333\)</span></td>
+<td class="l t b3 r0 l0 t0 lines"><span class="process-math">\(0.6666\)</span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="exercisegroup-limits-supplement-first-4-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="exercisegroup-limits-supplement-first-4-2-1">
+<span class="process-math">\(\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}\text{;}\)</span> <span class="process-math">\(\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}\)</span> exists.</div></div></details><details id="exercisegroup-limits-supplement-first-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="exercisegroup-limits-supplement-first-4-3-1">You should definitely recognize decimals approaching common fractions.  Good catch if you noted the <span class="process-math">\(t\)</span> was approaching <span class="process-math">\(\frac{1}{3}\)</span> only from the left. The suggested limit is <span class="process-math">\(\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}\text{,}\)</span> and this (one-sided) limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercisegroup-limits-supplement-first-5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l t b2 r0 l0 t3 lines"><span class="process-math">\(\theta\)</span></td>
+<td class="c t b2 r0 l0 t3 lines"><span class="process-math">\(\fe{g}{\theta}\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(-0.9\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(2{,}999{,}990\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(-0.99\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(2{,}999{,}999\)</span></td>
+</tr>
+<tr>
+<td class="l t b3 r0 l0 t0 lines"><span class="process-math">\(-0.999\)</span></td>
+<td class="c t b3 r0 l0 t0 lines"><span class="process-math">\(2{,}999{,}999.9\)</span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="exercisegroup-limits-supplement-first-5-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="exercisegroup-limits-supplement-first-5-2-1">
+<span class="process-math">\(\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000\text{;}\)</span> <span class="process-math">\(\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}\)</span> exists.</div></div></details><details id="exercisegroup-limits-supplement-first-5-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="exercisegroup-limits-supplement-first-5-3-1">Stay focused when determining “from the left” or “from the right”; that can get tricky…especially when the numbers are negative.  The limit suggested here is <span class="process-math">\(\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000\text{.}\)</span> So this limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="exercise-limits-supplement-last"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l t b2 r0 l0 t3 lines"><span class="process-math">\(t\)</span></td>
+<td class="c t b2 r0 l0 t3 lines"><span class="process-math">\(\fe{T}{t}\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.778\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(29{,}990\)</span></td>
+</tr>
+<tr>
+<td class="l t b0 r0 l0 t0 lines"><span class="process-math">\(0.7778\)</span></td>
+<td class="c t b0 r0 l0 t0 lines"><span class="process-math">\(299{,}999\)</span></td>
+</tr>
+<tr>
+<td class="l t b3 r0 l0 t0 lines"><span class="process-math">\(0.77778\)</span></td>
+<td class="c t b3 r0 l0 t0 lines"><span class="process-math">\(2{,}999{,}999.9\)</span></td>
+</tr>
+</table></div>
+<div class="solutions">
+<details id="exercise-limits-supplement-last-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="exercise-limits-supplement-last-2-1">
+<span class="process-math">\(\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty\text{;}\)</span> <span class="process-math">\(\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}\)</span> does not exist.</div></div></details><details id="exercise-limits-supplement-last-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="exercise-limits-supplement-last-3-1">The last entry in the output column is the same in the previous exercise.  Hopefully you recognized that you need to look at the pattern in the output, not just the last entry.  Recognizing that <span class="process-math">\(t\)</span> approaches <span class="process-math">\(\frac{7}{9}\)</span> might requires some guessing and checking. The limit suggested here is <span class="process-math">\(\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty\text{.}\)</span> So we say that this limit does not exist.</div></div></details>
+</div></article>
+</div>
+</div>
+<article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-3"><h3 class="heading"><span class="codenumber">6<span class="period">.</span></span></h3>
+<div class="para" id="limits-and-continuity-supplementary-exercises-3-1-1">Sketch onto <a href="" class="xref" data-knowl="./knowl/xref/figure-sketch-properties-supplement.html" title="Figure 2.14.1">Figure 2.14.1</a> a function, <span class="process-math">\(f\text{,}\)</span> with the following properties. Your graph should include all of the features addressed in lab.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel top" style="width:48.4536082474227%;"><div class="para logical" id="limits-and-continuity-supplementary-exercises-3-1-2-1">
+<div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-3-1-2-1-1">
+\begin{align*}
+\lim\limits_{x\to-4^{-}}\fe{f}{x}\amp=1\\
+\lim\limits_{x\to-4^{+}}\fe{f}{x}\amp=-2\\
+\lim\limits_{x\to3}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}\amp=-\infty
+\end{align*}
+</div>
+<div class="para">The only discontinuities on <span class="process-math">\(f\)</span> are at <span class="process-math">\(-4\)</span> and <span class="process-math">\(3\text{.}\)</span> <span class="process-math">\(f\)</span> has no <span class="process-math">\(x\)</span>-intercepts. <span class="process-math">\(f\)</span> is continuous from the right at <span class="process-math">\(-4\text{.}\)</span> <span class="process-math">\(f\)</span> has constant slope <span class="process-math">\(-2\)</span> over <span class="process-math">\(\ointerval{-\infty}{-4}\text{.}\)</span>
+</div>
+</div></div>
+<div class="sbspanel top" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-sketch-properties-supplement"><img src="generated/latex-image/figure-sketch-properties-supplement-2.svg" role="img" class="contained" alt="a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.14.1<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{f}{x}\)</span></figcaption></figure></div>
+</div></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/limits-and-continuity-supplementary-exercises-3-2-1.svg" role="img" class="contained"></div></div></details><details id="limits-and-continuity-supplementary-exercises-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/limits-and-continuity-supplementary-exercises-3-3-1.svg" role="img" class="contained"></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-4"><h3 class="heading"><span class="codenumber">7<span class="period">.</span></span></h3>
+<div class="para" id="limits-and-continuity-supplementary-exercises-4-1-1">Sketch onto <a href="" class="xref" data-knowl="./knowl/xref/figure-second-sketch-properties-supplement.html" title="Figure 2.14.2">Figure 2.14.2</a> a function, <span class="process-math">\(f\text{,}\)</span> with each of the properties stated below. Assume that there are no intercepts or discontinuities other than those directly implied by the given properties. Make sure that your graph includes all of the relevant features addressed in lab.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel bottom" style="width:48.4536082474227%;"><div class="para logical" id="limits-and-continuity-supplementary-exercises-4-1-2-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-4-1-2-1-1">
+\begin{align*}
+\fe{f}{-2}\amp=0\\
+\fe{f}{0}\amp=-1\\
+\fe{f}{-4}\amp=5\\
+\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}\amp=3\\
+\lim\limits_{x\to-4^{+}}\fe{f}{x}\amp=-2\\
+\lim\limits_{x\to-4^{-}}\fe{f}{x}\amp=5\\
+\lim\limits_{x\to3{-}}\fe{f}{x}\amp=-\infty\\
+\lim\limits_{x\to3^{+}}\fe{f}{x}\amp=\infty
+\end{align*}
+</div></div></div>
+<div class="sbspanel bottom" style="width:48.4536082474227%;"><figure class="figure figure-like" id="figure-second-sketch-properties-supplement"><img src="generated/latex-image/figure-second-sketch-properties-supplement-2.svg" role="img" class="contained" alt="a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.14.2<span class="period">.</span></span><span class="space"> </span><span class="process-math">\(y=\fe{f}{x}\)</span></figcaption></figure></div>
+</div></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-4-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/limits-and-continuity-supplementary-exercises-4-2-1.svg" role="img" class="contained"></div></div></details><details id="limits-and-continuity-supplementary-exercises-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/limits-and-continuity-supplementary-exercises-4-3-1.svg" role="img" class="contained"></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-5"><h3 class="heading"><span class="codenumber">8<span class="period">.</span></span></h3>
+<div class="para logical" id="limits-and-continuity-supplementary-exercises-5-1-1">
+<div class="para">Determine all of the values of <span class="process-math">\(x\)</span> where the function <span class="process-math">\(f\)</span> (given below) has discontinuities.  At each value where <span class="process-math">\(f\)</span> has a discontinuity, determine if <span class="process-math">\(f\)</span> is continuous from either the right or left at <span class="process-math">\(x\)</span> and also state whether or not the discontinuity is removable.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\fe{f}{x}=\begin{cases}\frac{2\pi}{x}&amp;x\leq3\\\fe{\sin}{\frac{2\pi}{x}}&amp;3\lt x\lt 4\\\frac{\fe{\sin}{x}}{\fe{\sin}{x}}&amp;4\lt x\leq7\\3-\frac{2x-8}{x-4}&amp;x\gt7\end{cases}
+\end{equation*}
+</div>
+</div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-5-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-5-2-1">Discontinuities at <span class="process-math">\(0,3,4\text{,}\)</span> and <span class="process-math">\(2\pi\text{.}\)</span> Continuous from the left at <span class="process-math">\(3\text{.}\)</span> Removable discontinuities at <span class="process-math">\(4\)</span> and <span class="process-math">\(2\pi\text{.}\)</span>
+</div></div></details><details id="limits-and-continuity-supplementary-exercises-5-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-5-3-1">
+<span class="process-math">\(f\)</span> is discontinuous from both directions at <span class="process-math">\(0\)</span> and the discontinuity is not removable. <span class="process-math">\(f\)</span> is discontinuous at <span class="process-math">\(3\)</span> although it is continuous from the left at <span class="process-math">\(3\text{.}\)</span>  The discontinuity is not removable.  (The problem is that the limits are different from the left and right of <span class="process-math">\(3\text{.}\)</span>) <span class="process-math">\(f\)</span> is discontinuous from both directions at <span class="process-math">\(4\)</span> but the discontinuity is removable (<span class="process-math">\(\lim\limits_{x\to4}\fe{f}{x}=1\)</span>). <span class="process-math">\(f\)</span> is discontinuous from both directions at <span class="process-math">\(2\pi\)</span> but the discontinuity is removable (<span class="process-math">\(\lim\limits_{x\to2\pi}\fe{f}{x}=1\)</span>).</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-6"><h3 class="heading"><span class="codenumber">9<span class="period">.</span></span></h3>
+<div class="para" id="limits-and-continuity-supplementary-exercises-6-1-1">Determine the value(s) of <span class="process-math">\(k\)</span> that make(s) the function <span class="process-math">\(g\)</span> defined by <span class="process-math">\(\fe{g}{t}=\begin{cases}t^2+kt-k&amp;t\geq3\\t^2-4k&amp;t\lt 3\end{cases}\)</span> continuous over <span class="process-math">\(\ointerval{-\infty}{\infty}\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-6-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-6-2-1"><span class="process-math">\(k=0\)</span></div></div></details><details id="limits-and-continuity-supplementary-exercises-6-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-6-3-1">
+<div class="para">Because the two formulas are polynomials, the only number where continuity is at issue is <span class="process-math">\(3\text{.}\)</span>  The top formula is used at <span class="process-math">\(3\text{,}\)</span> so <span class="process-math">\(\fe{g}{3}\)</span> is defined regardless of the value of <span class="process-math">\(k\text{.}\)</span>  Basically all we need to do is ensure that the limits from the left and the right of <span class="process-math">\(3\)</span> are both equal to <span class="process-math">\(\fe{g}{3}\text{.}\)</span>  We have:</div>
+<div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-6-3-1-7">
+\begin{align*}
+\fe{g}{3}&amp;=9+2k&amp;\lim_{t\to3^{+}}\fe{g}{t}&amp;=9+2k&amp;\lim_{t\to3^{-}}\fe{g}{t}7&amp;=9-4k
+\end{align*}
+</div>
+<div class="para">So <span class="process-math">\(g\)</span> will be continuous at <span class="process-math">\(3\)</span> (and, consequently, over <span class="process-math">\(\ointerval{-\infty}{\infty}\)</span>) if and only if <span class="process-math">\(9+2k=9-4k\text{.}\)</span>  This gives us <span class="process-math">\(k=0\text{.}\)</span>  Doh!  Turns out the <span class="process-math">\(g\)</span> isn’t piecewise at all, it’s simply the parabolic function <span class="process-math">\(\fe{g}{t}=t^2\text{.}\)</span>
+</div>
+</div></div></details>
+</div></article><div class="exercisegroup" id="limits-and-continuity-supplementary-exercises-7">
+<h3 class="heading"><span class="title">Exercise Group.</span></h3>
+<div class="introduction" id="limits-and-continuity-supplementary-exercises-7-1"><div class="para" id="limits-and-continuity-supplementary-exercises-7-1-1">Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, <span class="process-math">\(\infty\text{,}\)</span> or <span class="process-math">\(-\infty\text{.}\)</span>  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Forms table in <a href="appendix-limit-laws.html" class="internal" title="Appendix A: Limit Laws">Appendix A</a> summarizes strategies to be employed based upon the initial form of the limit.</div></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-2"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-2-1-1"><span class="process-math">\(\lim\limits_{x\to4^{-}}\left(5-\dfrac{1}{x-4}\right)\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-2-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-2-2-1">
+<span class="process-math">\(\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-2-3-1">
+<span class="process-math">\(\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-3"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-3-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-3-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}=1\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-3-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-3-3-1-1">
+\begin{align*}
+\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}&amp;=\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}\\
+&amp;=e^{\lim_{x\to\infty}\frac{1}{x}}&amp;&amp;\text{LL A6}\\
+&amp;=e^{0}&amp;&amp;\text{LL R3}\\
+&amp;=1&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-4"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-4-1-1"><span class="process-math">\(\lim\limits_{x\to2^{+}}\dfrac{x^2-4}{x^2+4}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-4-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-4-2-1">
+<span class="process-math">\(\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-4-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-4-3-1-1">
+\begin{align*}
+\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}&amp;=\frac{\lim\limits_{x\to2^{+}}\left(x^2-4\right)}{\lim\limits_{x\to2^{+}}\left(x^2+4\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{x\to2^{+}}x^2-\lim\limits_{x\to2^{+}}4}{\lim\limits_{x\to2^{+}}x^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{\left(\lim\limits_{x\to2^{+}}x\right)^2-\lim\limits_{x\to2^{+}}4}{\left(\lim\limits_{x\to2^{+}}x\right)^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{2^2-4}{2^2+4}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=0&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-5"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-5-1-1"><span class="process-math">\(\lim\limits_{x\to2^{+}}\dfrac{x^2-4}{x^2-4x+4}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-5-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-5-2-1">
+<span class="process-math">\(\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-5-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-5-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-5-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{x\to2^{+}}\frac{(x-2)(x+2)}{(x-2)^2}\\
+&amp;=\lim\limits_{x\to2^{+}}\frac{x+2}{x-2}&amp;&amp;\text{LL A7}\\
+&amp;=\infty&amp;&amp;\text{This limit does not exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-6"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-6-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-6-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-6-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}=\frac{1}{2}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-6-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-6-3-1">
+<div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-6-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+6\fe{\ln}{x}}{14\fe{\ln}{x}}\\
+&amp;=\lim\limits_{x\to\infty}\frac{7\fe{\ln}{x}}{14\fe{\ln}{x}}\\
+&amp;=\lim\limits_{x\to\infty}\frac{1}{2}&amp;&amp;\text{LL A7}\\
+&amp;=\frac{1}{2}&amp;&amp;\text{LL R2}
+\end{align*}
+</div>
+<div class="para">So this limit does exist.</div>
+</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-7"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-7-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}\dfrac{3x^3+2x}{3x-2x^3}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-7-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-7-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}=-\frac{3}{2}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-7-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-7-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-7-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\frac{\sfrac{1}{x^3}}{\sfrac{1}{x^3}}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}\\
+&amp;=\frac{\lim\limits_{x\to-\infty}\left(3+\frac{2}{x^2}\right)}{\lim\limits_{x\to-\infty}\left(\frac{3}{x^2}-2\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{x\to-\infty}3+\lim\limits_{x\to-\infty}\frac{2}{x^2}}{\lim\limits_{x\to-\infty}\frac{3}{x^2}-\lim\limits_{x\to-\infty}2}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{3+0}{0-2}&amp;&amp;\text{LL R2 and R3}\\
+&amp;=-\frac{3}{2}&amp;&amp;\text{This limit exists.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-8"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-8-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\fe{\sin}{\dfrac{\pi e^{3x}}{2e^x+4e^{3x}}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-8-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-8-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}=\frac{1}{\sqrt{2}}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-8-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-8-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-8-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{LL A6}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}\frac{\sfrac{1}{e^{3x}}}{\sfrac{1}{e^{3x}}}}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi}{\frac{2}{e^{2x}}+4}}\\
+&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\left(\frac{2}{e^{2x}}+4\right)}}&amp;&amp;\text{LL A5}\\
+&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\frac{2}{e^{2x}}+\lim\limits_{x\to\infty}4}}&amp;&amp;\text{LL A1}\\
+&amp;=\fe{\sin}{\frac{\pi}{0+4}}&amp;&amp;\text{LL R2 and R3}\\
+&amp;=\frac{1}{\sqrt{2}}&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-9"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-9-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-9-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-9-2-1">
+<span class="process-math">\(\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\)</span> does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-9-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-9-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\)</span> does not exist because the domain of the function <span class="process-math">\(\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\)</span> is <span class="process-math">\(\emptyset\)</span> (the empty set). There are no <span class="process-math">\(x\)</span>-values where <span class="process-math">\(\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\)</span> is defined.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-10"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-10-1-1"><span class="process-math">\(\lim\limits_{x\to5}\sqrt{\dfrac{x^2-12x+35}{5-x}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-10-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-10-2-1">
+<span class="process-math">\(\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}=\sqrt{2}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-10-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-10-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-10-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}\\
+&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{LL A6}\\
+&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}\\
+&amp;=\sqrt{\lim\limits_{x\to5}(x-7)\cdot-1}&amp;&amp;\text{LL A7}\\
+&amp;=\sqrt{\lim\limits_{x\to5}(7-x)}\\
+&amp;=\sqrt{\lim\limits_{x\to5}7-\lim\limits_{x\to5}x}&amp;&amp;\text{LL A2}\\
+&amp;=\sqrt{7-5}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=\sqrt{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-11"><h4 class="heading"><span class="codenumber">19<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-11-1-1"><span class="process-math">\(\lim\limits_{h\to0}\dfrac{4(3+h)^2-5(3+h)-21}{h}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-11-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-11-2-1">
+<span class="process-math">\(\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}=19\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-11-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-11-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-11-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{h\to0}\frac{4(9+6h+h^2)-15-5h-21}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{36+24h+4h^2-15-5h-21}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{19h+4h^2}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{h(19+4h)}{h}\\
+&amp;=\lim\limits_{h\to0}\left(19+4h\right)&amp;&amp;\text{LL A7}\\
+&amp;=\lim\limits_{h\to0}19+\lim\limits_{h\to0}4h&amp;&amp;\text{LL A1}\\
+&amp;=\lim\limits_{h\to0}19+4\lim\limits_{h\to0}h&amp;&amp;\text{LL A3}\\
+&amp;=19+4\cdot0&amp;&amp;\text{LL R1 and R2}\\
+&amp;=19&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-12"><h4 class="heading"><span class="codenumber">20<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-12-1-1"><span class="process-math">\(\lim\limits_{h\to0}\dfrac{5h^2+3}{2-3h^2}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-12-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-12-2-1">
+<span class="process-math">\(\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}=\frac{3}{2}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-12-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-12-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-12-3-1-1">
+\begin{align*}
+\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}&amp;=\frac{\lim\limits_{h\to0}\left(5h^2+3\right)}{\lim\limits_{h\to0}\left(2-3h^2\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{h\to0}\left(5h^2\right)+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-\lim\limits_{h\to0}\left(3h^2\right)}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{5\lim\limits_{h\to0}h^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\lim\limits_{h\to0}h^2}&amp;&amp;\text{LL A3}\\
+&amp;=\frac{5\left(\lim\limits_{h\to0}h\right)^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\left(\lim\limits_{h\to0}h\right)^2}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{5\cdot0^2+3}{2-3\cdot0^2}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=\frac{3}{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-13"><h4 class="heading"><span class="codenumber">21<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-13-1-1"><span class="process-math">\(\lim\limits_{h\to0}\dfrac{\sqrt{9-h}-3}{h}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-13-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-13-2-1">
+<span class="process-math">\(\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}=-\frac{1}{6}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-13-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-13-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-13-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{h\to0}\left(\frac{\sqrt{9-h}-3}{h}\cdot\frac{\sqrt{9-h}+3}{\sqrt{9-h}+3}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{(9-h)-9}{h\left(\sqrt{9-h}+3\right)}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{-h}{h\left(\sqrt{9-h}+3\right)}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{-1}{\sqrt{9-h}+3}\right)&amp;&amp;\text{LL A7}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\left(\sqrt{9-h}+3\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\sqrt{9-h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A1}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}(9-h)}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}9-\lim\limits_{h\to0}h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A2}\\
+&amp;=\frac{-1}{\sqrt{9-0}+3}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=-\frac{1}{6}&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-14"><h4 class="heading"><span class="codenumber">22<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-14-1-1"><span class="process-math">\(\lim\limits_{\theta\to\frac{\pi}{2}}\dfrac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-14-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-14-2-1">
+<span class="process-math">\(\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}=-\frac{1}{2}\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-14-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical" id="limits-and-continuity-supplementary-exercises-7-14-3-1"><div class="displaymath process-math" id="limits-and-continuity-supplementary-exercises-7-14-3-1-1">
+\begin{align*}
+&amp;\phantom{={}}\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-\fe{\sin}{2\theta}}&amp;&amp;\text{Trig identities}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-2\fe{\sin}{\theta}\fe{\cos}{\theta}}&amp;&amp;\text{Double angle identity}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{1}{-2\fe{\sin}{\theta}}&amp;&amp;\text{LL A7}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{\lim\limits_{\theta\to\frac{\pi}{2}}\left(-2\fe{\sin}{\theta}\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\lim\limits_{\theta\to\frac{\pi}{2}}\fe{\sin}{\theta}}&amp;&amp;\text{LL A3}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\fe{\sin}{\lim\limits_{\theta\to\frac{\pi}{2}}\theta}}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{1}{-2\fe{\sin}{\frac{\pi}{2}}}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=-\frac{1}{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}
+</div></div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-7-15"><h4 class="heading"><span class="codenumber">23<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-7-15-1-1"><span class="process-math">\(\lim\limits_{x\to0^{+}}\dfrac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-7-15-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-15-2-1">
+<span class="process-math">\(\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-7-15-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-7-15-3-1">The numerator approaches <span class="process-math">\(-\infty\)</span> and the denominator approaches <span class="process-math">\(0\)</span> from the positive side. So the ratio becomes large and negative without bound. We say <span class="process-math">\(\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty\)</span> and the limit does not exist.</div></div></details>
+</div></article>
+</div>
+</div>
+<div class="exercisegroup" id="limits-and-continuity-supplementary-exercises-8">
+<h3 class="heading"><span class="title">Exercise Group.</span></h3>
+<div class="introduction" id="limits-and-continuity-supplementary-exercises-8-1"><div class="para" id="limits-and-continuity-supplementary-exercises-8-1-1">Draw sketches of the curves <span class="process-math">\(y=e^x\text{,}\)</span> <span class="process-math">\(y=e^{-x}\text{,}\)</span> <span class="process-math">\(y=\fe{\ln}{x}\text{,}\)</span> and <span class="process-math">\(y=\frac{1}{x}\text{.}\)</span>  Note the coordinates of any and all intercepts.  This is something you should be able to do from memory/intuition.  If you cannot already do so, spend some time reviewing whatever you need to review so that you can do so. Once you have the graphs drawn, fill in each of the blanks below and decide whether or not each limit exists.  The appropriate symbol for some of the blanks is either <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\text{.}\)</span>
+</div></div>
+<div class="exercisegroup-exercises cols2">
+<article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-2"><h4 class="heading"><span class="codenumber">24<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-2-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}e^x=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-2-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-2-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^x=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-2-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-2-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^x=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-3"><h4 class="heading"><span class="codenumber">25<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-3-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}e^x=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-3-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-3-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}e^x=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-3-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-3-3-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}e^x=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-4"><h4 class="heading"><span class="codenumber">26<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-4-1-1"><span class="process-math">\(\lim\limits_{x\to0}e^x=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-4-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-4-2-1">
+<span class="process-math">\(\lim\limits_{x\to0}e^x=1\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-4-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-4-3-1">
+<span class="process-math">\(\lim\limits_{x\to0}e^x=1\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-5"><h4 class="heading"><span class="codenumber">27<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-5-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}e^{-x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-5-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-5-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^{-x}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-5-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-5-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^{-x}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-6"><h4 class="heading"><span class="codenumber">28<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-6-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}e^{-x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-6-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-6-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}e^{-x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-6-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-6-3-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}e^{-x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-7"><h4 class="heading"><span class="codenumber">29<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-7-1-1"><span class="process-math">\(\lim\limits_{x\to0}e^{-x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-7-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-7-2-1">
+<span class="process-math">\(\lim\limits_{x\to0}e^{-x}=1\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-7-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-7-3-1">
+<span class="process-math">\(\lim\limits_{x\to0}e^{-x}=1\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-8"><h4 class="heading"><span class="codenumber">30<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-8-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-8-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-8-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-8-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-8-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-9"><h4 class="heading"><span class="codenumber">31<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-9-1-1"><span class="process-math">\(\lim\limits_{x\to1}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-9-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-9-2-1">
+<span class="process-math">\(\lim\limits_{x\to1}\fe{\ln}{x}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-9-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-9-3-1">
+<span class="process-math">\(\lim\limits_{x\to1}\fe{\ln}{x}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-10"><h4 class="heading"><span class="codenumber">32<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-10-1-1"><span class="process-math">\(\lim\limits_{x\to0^{+}}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-10-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-10-2-1">
+<span class="process-math">\(\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-10-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-10-3-1">
+<span class="process-math">\(\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-11"><h4 class="heading"><span class="codenumber">33<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-11-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-11-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-11-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{x}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-11-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-11-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{x}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-12"><h4 class="heading"><span class="codenumber">34<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-12-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-12-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-12-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{x}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-12-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-12-3-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{x}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-13"><h4 class="heading"><span class="codenumber">35<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-13-1-1"><span class="process-math">\(\lim\limits_{x\to0^{+}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-13-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-13-2-1">
+<span class="process-math">\(\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-13-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-13-3-1">
+<span class="process-math">\(\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-14"><h4 class="heading"><span class="codenumber">36<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-14-1-1"><span class="process-math">\(\lim\limits_{x\to0^{-}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-14-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-14-2-1">
+<span class="process-math">\(\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-14-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-14-3-1">
+<span class="process-math">\(\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-15"><h4 class="heading"><span class="codenumber">37<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-15-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-15-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-15-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-15-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-15-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-16"><h4 class="heading"><span class="codenumber">38<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-16-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-16-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-16-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{e^x}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-16-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-16-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{e^x}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-17"><h4 class="heading"><span class="codenumber">39<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-17-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-17-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-17-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-17-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-17-3-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-18"><h4 class="heading"><span class="codenumber">40<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-18-1-1"><span class="process-math">\(\lim\limits_{x\to\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-18-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-18-2-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty\text{.}\)</span> This limit does not exist.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-18-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-18-3-1">
+<span class="process-math">\(\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty\text{.}\)</span> This limit does not exist.</div></div></details>
+</div></article><article class="exercise exercise-like" id="limits-and-continuity-supplementary-exercises-8-19"><h4 class="heading"><span class="codenumber">41<span class="period">.</span></span></h4>
+<div class="para" id="limits-and-continuity-supplementary-exercises-8-19-1-1"><span class="process-math">\(\lim\limits_{x\to-\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)</span></div>
+<div class="solutions">
+<details id="limits-and-continuity-supplementary-exercises-8-19-2" class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-19-2-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0\text{.}\)</span> This limit exists.</div></div></details><details id="limits-and-continuity-supplementary-exercises-8-19-3" class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para" id="limits-and-continuity-supplementary-exercises-8-19-3-1">
+<span class="process-math">\(\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0\text{.}\)</span> This limit exists.</div></div></details>
+</div></article>
+</div>
+</div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-piecewise-defined-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chapter-introduction-first-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

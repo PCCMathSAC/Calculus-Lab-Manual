@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h4 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">10<span class="period">.</span></span>
+</h4>
+<div class="para">Use the exponential formula for <span class="process-math">\(\tanh\)</span> to determine <span class="process-math">\(\lim\limits_{t\to-\infty}\fe{\tanh}{t}\)</span> and <span class="process-math">\(\lim\limits_{t\to\infty}\fe{\tanh}{t}\text{.}\)</span>
+</div>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like"><div class="para">
+<span class="process-math">\(\lim\limits_{t\to-\infty}\fe{\tanh}{t}=-1\)</span> and <span class="process-math">\(\lim\limits_{t\to\infty}\fe{\tanh}{t}=1\)</span>
+</div></div></details><details class="solution solution-like born-hidden-knowl"><summary><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like"><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\lim_{t\to-\infty}\fe{\tanh}{t}&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\\
+&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^t}{e^t}\\
+&amp;=\lim_{t\to-\infty}\frac{e^{2t}-1}{e^{2t}+1}\\
+&amp;=\frac{\lim_{t\to-\infty}\left(e^{2t}-1\right)}{\lim_{t\to-\infty}\left(e^{2t}+1\right)}\\
+&amp;=\frac{\lim_{t\to-\infty}e^{2t}-\lim_{t\to-\infty}1}{\lim_{t\to-\infty}e^{2t}+\lim_{t\to-\infty}1}\\
+&amp;=\frac{\left(\lim_{t\to-\infty}e^{t}\right)^2-1}{\left(\lim_{t\to-\infty}e^{t}\right)^2+1}\\
+&amp;=\frac{0^2-1}{0^2+1}\\
+&amp;=-1\\
+\lim_{t\to\infty}\fe{\tanh}{t}&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\\
+&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^{-t}}{e^{-t}}\\
+&amp;=\lim_{t\to\infty}\frac{1-e^{-2t}}{1+e^{-2t}}\\
+&amp;=\frac{\lim_{t\to\infty}\left(1-e^{-2t}\right)}{\lim_{t\to\infty}\left(1+e^{-2t}\right)}\\
+&amp;=\frac{\lim_{t\to\infty}1-\lim_{t\to\infty}e^{-2t}}{\lim_{t\to\infty}1+\lim_{t\to\infty}e^{-2t}}\\
+&amp;=\frac{1-\left(\lim_{t\to\infty}e^{-t}\right)^2}{1+\left(\lim_{t\to\infty}e^{-t}\right)^2}\\
+&amp;=\frac{1-0^2}{1+0^2}\\
+&amp;=1
+\end{align*}
+</div></div></div></details>
+</div></article><span class="incontext"><a class="internal" href="critical-numbers-graphing-from-formulas-supplementary-exercises.html#exercise-tanh-limits">in-context</a></span>
+</body>
+</html>
